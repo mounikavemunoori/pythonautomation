@@ -6,7 +6,7 @@ pipeline {
  	  	sh 'java -version'
  	  	sh 'python --version'
  	  	sh 'ls -lrt'
-     sh 'yum install python3-pip'
+     sh 'sudo yum install python3-pip'
  	  }
  	}
  	
