@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.067" timestamp="2022-07-03T10:59:52.627319" hostname="mvemunoori-ThinkPad-L480"><testcase classname="test_max_failures" name="test_sqrt_failure" time="0.001"><failure message="assert 5.0 == 6&#10; +  where 5.0 = &lt;built-in function sqrt&gt;(25)&#10; +    where &lt;built-in function sqrt&gt; = math.sqrt">def test_sqrt_failure():
+       num = 25
+&gt;      assert math.sqrt(num) == 6
+E      assert 5.0 == 6
+E       +  where 5.0 = &lt;built-in function sqrt&gt;(25)
+E       +    where &lt;built-in function sqrt&gt; = math.sqrt
+
+test_max_failures.py:6: AssertionError</failure></testcase><testcase classname="test_max_failures" name="test_square_failure" time="0.001"><failure message="assert (7 * 7) == 40">def test_square_failure():
+       num = 7
+&gt;      assert 7*7 == 40
+E      assert (7 * 7) == 40
+
+test_max_failures.py:10: AssertionError</failure></testcase><testcase classname="test_max_failures" name="test_equality_failure" time="0.001"><failure message="assert 10 == 11">def test_equality_failure():
+&gt;      assert 10 == 11
+E      assert 10 == 11
+
+test_max_failures.py:13: AssertionError</failure></testcase></testsuite></testsuites>

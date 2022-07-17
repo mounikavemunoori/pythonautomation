@@ -1,0 +1,4 @@
+2022-07-05 10:41:32,622 :INFO : test_debug_logging :An information statement is executed
+2022-07-05 10:41:32,622 :WARNING : test_debug_logging :A warning message is executed
+2022-07-05 10:41:32,622 :ERROR : test_debug_logging :An error message is executed
+2022-07-05 10:41:32,622 :CRITICAL : test_debug_logging :A critical message is executed
