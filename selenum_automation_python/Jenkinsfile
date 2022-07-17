@@ -6,6 +6,7 @@ pipeline {
  	  	sh 'java -version'
  	  	sh 'python --version'
  	  	sh 'ls -lrt'
+     sh 'sudo apt-get install python3-pip'
  	  }
  	}
  	
