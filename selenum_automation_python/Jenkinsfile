@@ -10,7 +10,7 @@ pollSCM('* * * * *')
  	  	sh 'java -version'
  	  	sh 'python --version'
  	  	sh 'ls -lrt'
-     //sh 'yum install epel-release -y'
+     sh 'yum install epel-release -y'
  	  }
  	}
  	
