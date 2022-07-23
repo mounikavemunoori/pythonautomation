@@ -5,3 +5,5 @@ pip install -r requirements.txt
 ls -lrt
 pip freeze
 pip list
+pytest --version
+
