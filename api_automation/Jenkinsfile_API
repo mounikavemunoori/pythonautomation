@@ -10,7 +10,6 @@ pollSCM('* * * * *')
  	  	sh 'java -version'
  	  	sh 'python --version'
  	  	sh 'ls -lrt'
-     //sh 'sudo yum install epel-release -y'
  	  }
  	}
 
