@@ -1,0 +1,48 @@
+pipeline {
+ agent any
+ triggers{
+// poll repo every 2 minute for changes
+pollSCM('* * * * *')
+}
+ stages {
+ 	stage('checking versions') {
+ 	  steps {
+ 	  	sh 'java -version'
+ 	  	sh 'python --version'
+ 	  	sh 'ls -lrt'
+     sh 'sudo yum install epel-release -y'
+ 	  }
+ 	}
+
+ 	stage('path') {
+ 		steps {
+ 			sh 'ls -lrt'
+ 			sh 'pwd'
+ 		}
+ 	}
+
+ 	stage('checkout branch') {
+ 		steps {
+ 			checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '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', url: 'https://github.com/mounikavemunoori/pythonautomation.git']]])
+ 			dir('api_automation') {
+      				sh "pwd"
+      				sh 'sudo chmod 777 scripts.sh'
+      				sh './scripts.sh'
+    				}
+ 			sh 'pwd'
+ 		}
+ 	}
+
+ 	stage('shell scripting') {
+ 		steps {
+ 			sh 'pwd'
+ 			dir('new_shell_programs/shell_scripting') {
+ 				sh 'pwd'
+ 				sh 'ls -lrt'
+ 				sh './commands.sh'
+ 			}
+ 		}
+ 	}
+
+ }
+}
