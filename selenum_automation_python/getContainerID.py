@@ -5,7 +5,7 @@ import pandas as pd
 from pandas import ExcelWriter
 from pandas import ExcelFile
 
-df = pd.read_excel('xlread.xlsx', sheet_name='Sheet1')
+df = pd.read_excel('xlread.xlsx', sheet_name='Sheet1', engine='openpyxl')
 
 # print("Column headings:")
 # print(df.columns)
