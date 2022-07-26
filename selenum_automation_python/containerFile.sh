@@ -11,4 +11,5 @@ SUBFOLD1=${BASEPATH%%/}/xlread1.xlsx
 SUBFOLD2=${BASEPATH%%/}/subFold2
 
 echo $SUBFOLD1
+python getContainerID.py
 
