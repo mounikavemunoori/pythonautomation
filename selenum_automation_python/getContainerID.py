@@ -1,5 +1,5 @@
 # Import the xlrd module
-import xlrd
+# import xlrd
 
 import pandas as pd
 from pandas import ExcelWriter
